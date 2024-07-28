@@ -15,6 +15,7 @@ import { PasswordInput } from '@/shared/ui/password-input';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { ComputerIcon } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
@@ -24,6 +25,7 @@ const formSchema = z.object({
 });
 
 export default function LoginPage() {
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -34,7 +36,7 @@ export default function LoginPage() {
 
   const handleSubmit = (values: z.infer<typeof formSchema>) => {
     console.log('handleSubmit', values.email, values.password);
-    
+    router.push('/dashboard');
   }
 
   return (
