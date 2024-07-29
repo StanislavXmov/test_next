@@ -6,10 +6,10 @@ import { LightDarkToogle } from "@/shared/ui/light-dark-toggle";
 
 export default function MainMenu() {
   return (
-    <div className="bg-muted overflow-auto p-4 flex flex-col">
-      <div className="border-b dark:border-b-black border-b-zinc-300 pb-4">
+    <nav className="bg-muted overflow-auto p-4 flex flex-col">
+      <header className="border-b dark:border-b-black border-b-zinc-300 pb-4">
         <MenuTitle />
-      </div>
+      </header>
       <div className="py-4 grow">
         <MenuItem href="/dashboard">
           My dashboard
@@ -27,7 +27,7 @@ export default function MainMenu() {
           Settings
         </MenuItem>
       </div>
-      <div className="flex gap-2 items-center">
+      <footer className="flex gap-2 items-center">
         <Avatar>
           <AvatarFallback className="bg-primary">
             US
@@ -37,7 +37,7 @@ export default function MainMenu() {
           Logout
         </Link>
         <LightDarkToogle className="ml-auto" />
-      </div>
-    </div>
+      </footer>
+    </nav>
   );
 }
