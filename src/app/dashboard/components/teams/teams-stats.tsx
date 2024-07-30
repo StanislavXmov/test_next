@@ -8,6 +8,7 @@ import Link from "next/link";
 import UserImage from '../../../../../public/user.png';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/shared/ui/tooltip";
 import TeamDistributionChart from "./team-distribution-chart";
+import SupportTicketsResolved from "./support-tickets-resolved";
 
 const teamLeaders = [
   {
@@ -126,7 +127,7 @@ export default function TeamsStats() {
           </CardTitle>
         </CardHeader>
         <CardContent className="pl-0">
-          Line graph
+          <SupportTicketsResolved />
         </CardContent>
       </Card>
     </>
