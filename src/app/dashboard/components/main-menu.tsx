@@ -3,11 +3,12 @@ import MenuItem from "./menu-item";
 import MenuTitle from "./menu-title";
 import Link from "next/link";
 import { LightDarkToogle } from "@/shared/ui/light-dark-toggle";
+import { cn } from "@/shared/ui/utils";
 
-export default function MainMenu() {
+export default function MainMenu({ className }: {className?: string}) {
   return (
-    <nav className="bg-muted overflow-auto p-4 flex flex-col">
-      <header className="border-b dark:border-b-black border-b-zinc-300 pb-4">
+    <nav className={cn(className, "md:bg-muted overflow-auto p-4 flex-col")}>
+      <header className="hidden md:block border-b dark:border-b-black border-b-zinc-300 pb-4">
         <MenuTitle />
       </header>
       <div className="py-4 grow">
