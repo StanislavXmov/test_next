@@ -27,6 +27,9 @@ export default function MainMenu({ className }: {className?: string}) {
         <MenuItem href="/dashboard/settings">
           Settings
         </MenuItem>
+        <MenuItem href="/dashboard/form">
+          Form
+        </MenuItem>
       </div>
       <footer className="flex gap-2 items-center">
         <Avatar>
